@@ -93,7 +93,6 @@ const fetchBookmarks = function () {
 
 // Delete bookmark
 const deleteBookmark = function (id) {
-  console.log(bookmarks);
 
   if (bookmarks[id]) {
     delete bookmarks[id];
@@ -106,8 +105,7 @@ const deleteBookmark = function (id) {
 // Handle data from form
 const storeBookmark = function (e) {
   e.preventDefault();
-
-  console.log(e.target);
+  
   const nameValue = websiteNameEl.value;
   let url = websiteUrlEl.value;
   if (!url.includes("http://", "https://")) {
